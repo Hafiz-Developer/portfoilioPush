@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "variables";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: $bg-clr;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@import "navbar";
+@import "info";
+@import "about";
+@import "services";
+@import "pricing";
+@import "client";
+@import "project";
+@import "skill";
+@import "contact";
+@import "footer";
+@import "cv";
+
+.mainInfo .button,
+.about_text button,
+.buttonSkill button,
+.services_tex .button,
+.order button,
+.ahmad,
+.titlePrice button,
+.addReivew button,
+.project-text a ,
+.order button,
+.allskills button,
+.iconCv ,
+.find,
+.findContact .icons,
+.arrow-up
+{
+  font-weight: 600 !important;
+  text-transform: $text-capt;
+  cursor: $cursor;
+  background: $button-bg;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383), -2px -0px 10px 0px $box-shadow;
+  color: $pink-color;
+}
+
+    .client-seocnd {
+    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
+box-shadow: -5px -7px 13px 0px #24272b, 11px 11px 15px 0px #1d1f23;
+
+}
+.services_box ,   .pricingCard  ,  .client-id , .contact-id   {
+    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383), -2px -0px 10px 0px $box-shadow;
+
+}
+.mainInfo   .img{
+    background-color: $info-img-bg;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.383), -2px -0px 10px 0px $box-shadow;
+}
+  .education-skills{
+    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
+    box-shadow: -0px -0px 8px 0px $box-shadow, 0px 0px  8px 0px $box-shadow;
+  }
+  .container ,  .about-cv  ,  .workExperience  , .References {
+    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383), -2px -0px 7px 0px $box-shadow;
+}
+.firstHead {
+    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
+  box-shadow: 4px 4px 15px 0px #2b2f34;
+
+}

@@ -1,0 +1,709 @@
+.page-content {
+  .firstHead {
+    padding-block: 7rem;
+    .my-data {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .imgCover {
+        z-index: 9999;
+        transition: all 0.3s ease-out;
+        height: 15rem;
+        width: 15rem;
+        border-radius: 10rem;
+        &::before {
+          content: "";
+          border: 15px solid #ff014d;
+          border-radius: 50%;
+          height: 150px;
+          width: 150px;
+          position: absolute;
+          -webkit-animation: pulsate 1.6s ease-out;
+          animation: pulsate 1.6s ease-out;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          opacity: 0;
+          z-index: 99;
+        }
+        @-webkit-keyframes pulsate {
+          0% {
+            transform: scale(0.6, 0.6);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1, 1);
+            opacity: 0;
+          }
+        }
+        @keyframes pulsate {
+          0% {
+            transform: scale(0.6, 0.6);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1, 1);
+            opacity: 0;
+          }
+        }
+        img {
+          position: relative;
+          border-radius: 50%;
+          cursor: pointer;
+          height: 180px;
+          width: 180px;
+          padding: 0;
+          object-fit: cover;
+          margin: 0;
+          border: 15px solid transparent;
+          z-index: 9999;
+          transition: all 0.3s ease-out;
+          &:hover {
+            transform: scale(1.06, 1.06);
+            &::before {
+              -webkit-animation: none;
+              animation: none;
+            }
+          }
+        }
+      }
+      h2 {
+        color: $text-color-white;
+        font-size: clamp(2.7rem, 8vw, 4rem);
+        margin-top: 3rem;
+        text-transform: uppercase;
+      }
+      p {
+        color: $text-color-medium;
+        opacity: 0.8;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        margin-top: 0.5rem;
+        text-transform: capitalize;
+      }
+      .buttonCv {
+        display: flex;
+        margin-top: 3rem;
+        gap: 1.5rem;
+        cursor: pointer;
+        button {
+          background-color: $pink-color;
+          cursor: pointer;
+          padding: 1rem 3rem;
+          font-size: 1.4rem;
+          color: $text-color-white;
+          text-transform: capitalize;
+          border: none;
+          outline: none;
+          border-radius: 0.2rem;
+        }
+      }
+      .iconMain {
+        .iconCv {
+          position: fixed;
+          gap: 2rem;
+          right: -9.4rem;
+          top: 15rem;
+          display: flex;
+          flex-direction: row;
+          width: 25rem;
+          rotate: 270deg;
+          z-index: 1;
+          padding: 1rem 2rem;
+          .icons {
+            color: $text-color-white;
+            font-size: 1.5rem;
+            background: $button-bg;
+            box-shadow: 7px 6px 11px -3px rgba(0, 0, 0, 0.121),
+              -8px -6px 13px 0px #24272b;
+            rotate: 90deg;
+            height: 3.5rem;
+            width: 4rem;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .workExperience {
+    margin-top: 7rem;
+    margin-inline: auto;
+    width: calc(100% - 20rem);
+    padding: 2rem;
+    height: 100%;
+    h1 {
+      font-size: clamp(3rem, 10vw, 4rem);
+      color: $text-color-big;
+      font-weight: 700;
+    }
+    .topMarigin {
+      margin-top: 3rem;
+
+      .work {
+        padding-left: 3rem;
+        padding-top: 3rem;
+        position: relative;
+        border-left: 1.6px solid $pink-color;
+        position: relative;
+        left: 3rem;
+        margin-top: 2rem;
+        :before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          background-color: $text-color-white;
+          border-radius: 100%;
+          width: 20px;
+          height: 20px;
+          top: 0px;
+          left: -16px;
+          border: 5px solid $pink-color;
+          z-index: 2;
+        }
+        .projects{
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: calc(100% - 3rem);
+            margin-inline: auto;
+            span{
+              font-size: 2rem;
+              color: $text-color-white;
+              text-transform: capitalize;
+            }
+            a{
+              font-weight: 900;
+              color: $pink-color;
+                opacity: 0.8;
+                font-size: 1.4rem;
+                letter-spacing: 0.1rem;
+                text-decoration: none;
+                transition: 300ms;
+                &:focus{
+                  color: rgb(0, 0, 200);
+                }
+            }
+        }
+        h2 {
+          color: $text-color-medium;
+          font-size: clamp(1.5rem, 3.5vw, 3rem);
+          font-weight: 600;
+          span{
+            color: $pink-color;
+          }
+        }
+        h4 {
+          margin-top: 1rem;
+          font-size: 1.3rem;
+          color: $text-color-medium;
+        }
+        p {
+          color: $text-color-small;
+          opacity: 0.8;
+          text-align: justify;
+          font-size: clamp(1rem, 4vw, 1.7rem);
+          margin-top: 1.2rem;
+          opacity: 0.5;
+          width: calc(100% - 20rem);
+          line-height: clamp(1rem, 5vw, 2.5rem);
+        }
+      }
+    }
+  }
+  .References {
+    margin-top: 7rem;
+    margin-inline: auto;
+    padding: 2rem;
+    width: calc(100% - 20rem);
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      color: $text-color-big;
+    }
+    .flex-r {
+      display: flex;
+      gap: 4rem;
+      margin-top: 2rem;
+      .card {
+        width: 70rem;
+        .references-img {
+          display: flex;
+          align-items: flex-end;
+          gap: 1rem;
+          line-height: 2rem;
+          h3 {
+            color: $text-color-big;
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+          p {
+            font-size: 1.3rem;
+            color: $text-color-small;
+            opacity: 1;
+          }
+          .img {
+            height: 6rem;
+            width: 6rem;
+            border-radius: 3rem;
+            position: relative;
+            z-index: 9999;
+            transition: all 0.3s ease-out;
+            &::before {
+              content: "";
+              border: 5px solid #ff014d;
+              border-radius: 50%;
+              height: 6rem;
+              width: 6rem;
+              position: absolute;
+              -webkit-animation: pulsate 1.6s ease-out;
+              animation: pulsate 1.6s ease-out;
+              -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+              opacity: 0;
+              z-index: 99;
+            }
+            @-webkit-keyframes pulsate {
+              0% {
+                transform: scale(0.6, 0.6);
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                transform: scale(1, 1);
+                opacity: 0;
+              }
+            }
+            @keyframes pulsate {
+              0% {
+                transform: scale(0.6, 0.6);
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                transform: scale(1, 1);
+                opacity: 0;
+              }
+            }
+            img {
+              object-fit: cover;
+              border-radius: 3rem;
+              width: 100%;
+              position: relative;
+              top: 0.4rem;
+              left: 0.4rem;
+              cursor: pointer;
+              z-index: 9999;
+              transition: all 0.3s ease-out;
+            }
+          }
+        }
+        h6 {
+          font-size: 2rem;
+          letter-spacing: 0.1rem;
+          font-weight: 200;
+          opacity: 0.9;
+          margin-top: 2rem;
+          line-height: 2.5rem;
+          text-align: justify;
+          color: $text-color-small;
+          opacity: 0.5;
+          width: calc(100% - 0rem);
+        }
+      }
+    }
+  }
+  .about-cv {
+    margin-top: 7rem;
+    margin-inline: auto;
+    padding: 2rem;
+    width: clamp(20rem, 85%, 120rem);
+    display: flex;
+    justify-content: right;
+    gap: 9rem;
+    .aboutCv {
+      width: calc(100% - 30%);
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: $text-color-big;
+        text-transform: capitalize;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        color: $text-color-small;
+        opacity: 0.8;
+        line-height: 2.3rem;
+        font-weight: 400;
+        text-align: justify;
+        a {
+          font-size: 1.5rem;
+          color: $pink-color;
+          font-weight: 600;
+          opacity: 1;
+          text-decoration: none;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .info-cv {
+      width: 60%;
+      h1 {
+        font-size: clamp(2rem, 10vw, 4rem);
+        color: $text-color-big;
+        font-weight: 700;
+      }
+      .flex-info {
+        display: flex;
+        margin-top: 1rem;
+        gap: 4rem;
+        @media (width < 430px) {
+        gap: 2rem;
+        }
+        line-height: 4rem;
+        .left {
+          h2 {
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $pink-color;
+            opacity: 0.8;
+          }
+        }
+        .right {
+          p {
+            color: $text-color-small;
+            font-size: 1.5rem;
+            @media (width < 385px) {
+              font-size: 1.1rem;
+              }
+          }
+        }
+      }
+    }
+  }
+  .education-skills{
+    margin-top: 5rem;
+    margin-inline: auto;
+    padding: 2rem;
+    width: clamp(20rem, 90%, 100rem);
+    h2{
+        font-size: 4rem;
+        font-weight: 700;
+        color: $text-color-big;
+        text-transform: capitalize;
+    }
+    .education{
+        .flexEd{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        h1{
+            color: $text-color-big;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+        p{
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            text-transform: capitalize;
+            color: $text-color-small;
+            opacity: 0.8;
+        }
+        strong{
+            margin-top: 1rem;
+            opacity: 0.8;
+            color: $pink-color;
+            font-size: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+    }
+    }
+    .skills{
+        margin-top: 3rem;
+        .allskills{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(125px, 1fr));
+        padding-inline: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        gap: 1.5rem;
+        button{
+            padding-block: 1rem ;
+            border: none;
+            outline: none;
+            border-radius: 2rem;
+            text-transform: capitalize;
+            font-weight: 300;
+            font-size: 1.3rem;
+            transition: 0.2s ease-in-out;
+            letter-spacing: 0.1rem;
+        }
+    }
+    }
+  }
+}
+@media (width < 992px) {
+  .page-content {
+    .workExperience {
+      width: calc(100% - 20rem);
+      .topMarigin {
+        .work {
+          p {
+            width: calc(100% - 5rem);
+          }
+        }
+      }
+    }
+    .References {
+      margin-top: 5rem;
+      width: calc(100% - 3rem);
+    }
+    .about-cv {
+      width: calc(100% - 6.5rem);
+      margin-inline: 0;
+      gap: 3rem;
+    }
+  }
+}
+@media (width < 882px) {
+  .page-content {
+    .about-cv {
+      width: calc(100% - 6.5rem);
+      margin-inline: auto;
+      gap: 3rem;
+      flex-direction: column;
+      .aboutCv {
+        width: calc(100% - 10%);
+      }
+      .info-cv {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (width < 776px) {
+  .page-content {
+    .workExperience {
+      width: calc(100% - 6.5rem);
+      margin-inline: 0;
+      .topMarigin {
+        .work {
+          p {
+            width: calc(100% - 1rem);
+          }
+        }
+      }
+    }
+  }
+}
+@media (width < 700px) {
+  .page-content {
+    .firstHead {
+      padding-block: 3rem;
+    }
+    .workExperience{
+        .topMarigin{
+            .work{
+                .projects{
+                    gap: 0.6rem;
+                    width: calc(100% - 0rem);
+                    margin-inline: 0;
+                    justify-content: start;
+                }
+            }
+        }
+    }
+    .References {
+      margin-top: 5rem;
+      width: calc(100% - 3rem);
+      .flex-r {
+        flex-direction: column;
+        margin-top: 4rem;
+        .card {
+          width: 100%;
+          h6 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            line-height: 2rem;
+            width: calc(100% - 10rem);
+          }
+        }
+      }
+    }
+    .education-skills{
+        padding: 2rem;
+        .education{
+            .flexEd{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding-left: 2rem;
+        }
+        }
+      }
+  }
+}
+@media (width < 576px) {
+  .page-content {
+    .firstHead {
+      .my-data {
+        .iconMain {
+          .iconCv {
+            position: relative;
+            gap: 1rem;
+            right: 0rem;
+            top: 1rem;
+            width: 21.5rem;
+            rotate: 0deg;
+            padding: 1rem;
+            background: #22262a;
+            box-shadow: none;
+            .icons {
+              color: $text-color-white;
+              font-size: 1.5rem;
+              background: #22262a;
+              box-shadow: 7px 6px 11px -3px rgba(0, 0, 0, 0.121),
+                -8px -6px 13px 0px #24272b;
+              rotate: 0deg;
+            }
+          }
+        }
+      }
+    }
+    .workExperience {
+      width: calc(100% - 2rem);
+      margin-top: 4rem;
+      margin-inline: auto;
+      .topMarigin {
+        .work {
+          padding-left: 2rem;
+          padding-top: 3rem;
+          position: relative;
+          left: 1rem;
+          margin-top: 2rem;
+          :before {
+            width: 18px;
+            height: 18px;
+            top: 0px;
+            left: -16px;
+          }
+          p {
+            width: calc(100% - 1rem);
+          }
+        }
+      }
+    }
+    .References {
+      width: calc(100% - 2rem);
+      .flex-r {
+        .card {
+          h6 {
+            width: calc(100% - 0rem);
+          }
+        }
+      }
+    }
+    .about-cv {
+      margin-top: 4rem;
+      width: calc(100% - 1rem);
+    }
+  }
+}
+
+@media (width < 500px) {
+  .page-content {
+    .firstHead {
+      .my-data {
+        .buttonCv {
+          margin-top: 2rem;
+          button {
+            padding: 0.7rem 2rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (width < 400px) {
+  .page-content {
+    .workExperience {
+      width: calc(100% - 1rem);
+      padding: 1rem 0.7rem;
+      .topMarigin {
+        .work {
+          padding-left: 0rem;
+          padding-top: 1rem;
+          margin-top: 1rem;
+          border: none;
+          :before {
+            display: none;
+          }
+          p {
+            width: calc(100% - 1rem);
+          }
+        }
+      }
+    }
+    .References {
+      width: calc(100% - 1rem);
+      .flex-r {
+        margin-top: 2rem;
+      }
+    }
+    .about-cv {
+      padding: 2rem 1rem;
+      .aboutCv {
+        width: calc(100% - 0%);
+      }
+      .info-cv {
+        .flex-info {
+          gap: 1rem;
+        }
+      }
+    }
+    .education-skills{
+        margin-top: 3rem;
+        padding: 2rem 1rem;
+        .education{
+            .flexEd{
+                padding-left: 0.2rem;
+        }
+        }
+        .skills{
+            margin-top: 2rem;
+            .allskills{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(115px, 1fr));
+            padding-inline: 2rem;
+            button{
+                padding-block: 1rem ;
+                padding-inline: 0.2rem ;
+                font-size: 1.2rem;
+            }
+        }
+        }
+      }
+  }
+}
