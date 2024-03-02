@@ -102,6 +102,10 @@
           border: none;
           outline: none;
           border-radius: 0.2rem;
+          a{
+            text-decoration: none;
+          color: $text-color-white;
+          }
         }
       }
       .iconMain {
@@ -123,7 +127,7 @@
             box-shadow: 7px 6px 11px -3px rgba(0, 0, 0, 0.121),
               -8px -6px 13px 0px #24272b;
             rotate: 90deg;
-            height: 3.5rem;
+            height: 4rem;
             width: 4rem;
             padding: 1rem;
           }
@@ -254,7 +258,7 @@
           .img {
             height: 6rem;
             width: 6rem;
-            border-radius: 3rem;
+            border-radius: 10rem;
             position: relative;
             z-index: 9999;
             transition: all 0.3s ease-out;
@@ -265,6 +269,7 @@
               height: 6rem;
               width: 6rem;
               position: absolute;
+              right: -1rem;
               -webkit-animation: pulsate 1.6s ease-out;
               animation: pulsate 1.6s ease-out;
               -webkit-animation-iteration-count: infinite;
@@ -300,11 +305,11 @@
             }
             img {
               object-fit: cover;
-              border-radius: 3rem;
-              width: 100%;
+              border-radius: 50%;
+              width: 90%;
               position: relative;
-              top: 0.4rem;
-              left: 0.4rem;
+              top: 0.3rem;
+              left: 0.7rem;
               cursor: pointer;
               z-index: 9999;
               transition: all 0.3s ease-out;

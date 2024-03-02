@@ -12,28 +12,37 @@ const Cvdownload: React.FC = () => {
   const startDate = new Date("2022-01-01");
   const currentDate = new Date();
   const durationInMs = currentDate.getTime() - startDate.getTime();
-  const years = Math.floor(durationInMs / (1000 * 60 * 60 * 24 * 365)); // Calculate years
+  const years = Math.floor(durationInMs / (1000 * 60 * 60 * 24 * 365));
   const remainingMonths = Math.floor(
     (durationInMs % (1000 * 60 * 60 * 24 * 365)) /
       (1000 * 60 * 60 * 24 * 30.4375)
-  ); // Calculate remaining months
+  );
 
   const startDate2 = new Date("2023-04-01");
   const currentDate2 = new Date();
   const durationInMs2 = currentDate2.getTime() - startDate2.getTime();
-  const years2 = Math.floor(durationInMs2 / (1000 * 60 * 60 * 24 * 365)); // Calculate years
+  const years2 = Math.floor(durationInMs2 / (1000 * 60 * 60 * 24 * 365));
   const remainingMonths2 = Math.floor(
     (durationInMs % (1000 * 60 * 60 * 24 * 365)) /
       (1000 * 60 * 60 * 24 * 30.4375)
-  ); // Calculate remaining months
+  );
 
+  const handleDownload = () => {
+    const fileUrl = "/resume.pdf";
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.setAttribute("download", "resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
       <div className="page-content">
         <div className="firstHead">
           <div className="my-data">
             <div className="imgCover">
-              <img src="anthony.jpg" alt="" />
+              <img src="/cvImage.jpg" alt="" />
             </div>
             <h2>Hafiz Ahmad Iftikhar</h2>
             <p>BS COMPUTER SCIENCE , WEB DEVELOPER</p>
@@ -67,8 +76,11 @@ const Cvdownload: React.FC = () => {
               </div>
             </div>
             <div className="buttonCv">
-              <button>hire me </button>
-              <button>download cv</button>
+              <button>
+                {" "}
+                <a href="https://www.linkedin.com/in/hafiz-ahmad-523a54296/"> open network </a>{" "}
+              </button>
+              <button onClick={handleDownload}>download cv </button>
             </div>
           </div>
         </div>
@@ -173,7 +185,7 @@ const Cvdownload: React.FC = () => {
               <h2>
                 Frontend Developer <span>Specialist</span>
               </h2>
-              <h4>May, 2015 - Present</h4>
+              <h4>May, 2022 - Present</h4>
               <div className="projects">
                 <span>only Fronted Projects :</span>
                 <a href="https://mbnecom.com/">mbnecom.som</a>
@@ -201,11 +213,11 @@ const Cvdownload: React.FC = () => {
               <h2>
                 Backend Development <span>Specialist</span>{" "}
               </h2>
-              <h4>May, 2015 - Present</h4>
+              <h4>May, 2023 - Present</h4>
               <div className="projects">
-                <span>Dynamic Website Projects :</span>
-                <a href="https://hafizdeveloper.com/">hafizdeveloper.som</a>
-                <a href="https://www.seotoolers.com/">.seotoolers.som</a>
+                <span>Dynamic Website :</span>
+                <a href="https://hafizdeveloper.com/">hafizdeveloper.com</a>
+                <a href="https://www.seotoolers.com/">.seotoolers.com</a>
               </div>
               <p>
                 In the{" "}
@@ -231,7 +243,7 @@ const Cvdownload: React.FC = () => {
             <div className="card">
               <div className="references-img">
                 <div className="img">
-                  <img src="anthony.jpg" alt="" />
+                  <img src="/cvImage.jpg" alt="" />
                 </div>
                 <div className="text-references">
                   <h3>AIYANA</h3>
@@ -246,7 +258,7 @@ const Cvdownload: React.FC = () => {
             <div className="card">
               <div className="references-img">
                 <div className="img">
-                  <img src="anthony.jpg" alt="" />
+                  <img src="/cvImage.jpg" alt="" />
                 </div>
                 <div className="text-references">
                   <h3>AIYANA</h3>

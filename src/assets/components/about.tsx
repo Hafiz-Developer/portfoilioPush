@@ -1,10 +1,9 @@
 import React from "react";
-import aboutImg from "../img/about.png";
 const About: React.FC = () => {
   return (
     <>
       <div className="about" id="about">
-        <img src={aboutImg} alt="" />
+        <img src="/about.png" alt="" />
         <div className="about_text">
           <div className="client-about">
             <p>Educational Background</p>

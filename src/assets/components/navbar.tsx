@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "../img/Logo.png";
 
 const Navbar: React.FC = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -12,20 +11,20 @@ const Navbar: React.FC = () => {
     } else {
       const element = document.getElementById(link);
       if (element) {
-        const navbarHeight = document.querySelector(".header")?.clientHeight || 0;
+        const navbarHeight =
+          document.querySelector(".header")?.clientHeight || 0;
         const offset = element.offsetTop - navbarHeight - 0; // Adjust as needed
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
     }
   };
-  
+
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
-    if(!isNavOpen){
-      document.body.style.overflow = 'hidden';
-    }
-    else{
-      document.body.style.overflow = 'auto';
+    if (!isNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
   };
   const [stickyClass, setStickyClass] = useState("");
@@ -46,7 +45,7 @@ const Navbar: React.FC = () => {
     <>
       <header className={`header ${stickyClass}`}>
         <div className="logo">
-          <img src={logo} alt="" />
+          <img src="/headerLogo.png" alt="" />
         </div>
         <nav>
           <ul className={`${isNavOpen ? "nav-open" : ""}`}>

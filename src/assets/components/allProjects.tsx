@@ -10,27 +10,37 @@ const Allproject: React.FC = () => {
   const projectData = [
     {
       projectId: 1,
-      projectName: "Project 1",
-      projectDescription: "Description for Project 1",
-      imageUrl1: "seo.png",
-      imageUrl2: "Seo4.png",
-      url: "http://example.com/project1",
+      projectName: "mbnecom",
+      projectDescription:
+        "mbnecom.com is a static  site made with HTML, CSS, and JavaScript. It ensures smooth transactions, showcases products effectively, and integrates with major platforms like Amazon and eBay for convenient, secure payments",
+      imageUrl1: "mbn.png",
+      imageUrl2: "mbnMobile.png",
+      url: "https://mbnecom.com/",
     },
     {
       projectId: 2,
-      projectName: "Project 2",
-      projectDescription: "Description for Project 2",
+      projectName: "seotoolers",
+      projectDescription: "seotoolers.com is a dynamic website with front-end development in HTML, CSS, JavaScript, and Next.js, backed by Node.js, Express.js, and MongoDB. Users can buy, sell, and access services, with additional offerings for diverse needs.",
       imageUrl1: "seo.png",
-      imageUrl2: "Seo4.png",
-      url: "http://example.com/project2",
+      imageUrl2: "seoMobile.png",
+      url: "https://www.seotoolers.com/",
     },
     {
       projectId: 3,
-      projectName: "Project 3",
-      projectDescription: "Description for Project 3",
-      imageUrl1: "seo.png",
-      imageUrl2: "Seo4.png",
-      url: "http://example.com/project3",
+      projectName: "restaurantw",
+      projectDescription: "The website restaurantw.netlify.app is designed specifically for restaurant reservations, focusing on evening dining experiences. It is a static website, crafted with HTML, CSS,  JavaScript and  React js , ensuring simplicity and efficiency in its functionality.",
+      imageUrl1: "res.png",
+      imageUrl2: "resMobile.png",
+      url: "https://restaurantw.netlify.app/",
+    },
+    {
+      projectId: 4,
+      projectName: "hcars",
+      projectDescription:
+        "The website hcars.netlify.app is a static site designed for car enthusiasts. Developed using HTML, CSS, JavaScript, and React.js, it offers a user-friendly interface for browsing and exploring cars. Whether you're looking to buy, sell, or simply admire cars, this platform provides a seamless experience. With its sleek design and intuitive navigation, hcars.netlify.app caters to all automotive enthusiasts' needs.",
+        imageUrl1: "car.png",
+        imageUrl2: "carMobile.png",
+      url: "https://hcars.netlify.app/",
     },
   ];
 
