@@ -1,10 +1,10 @@
 import React from "react";
-import aboutImg from "../img/about.png";
+import { FaArrowRight } from "react-icons/fa";
 const About: React.FC = () => {
   return (
     <>
       <div className="about" id="about">
-        <img src={aboutImg} alt="" />
+        <img src="/about.png" alt="" />
         <div className="about_text">
           <div className="client-about">
             <p>Educational Background</p>
@@ -20,7 +20,7 @@ const About: React.FC = () => {
             who understands the intricacies of the MERN stack.
           </p>
           <a href="https://www.linkedin.com/in/hafiz-ahmad-523a54296/">
-          <button type="button">hire me</button>
+          <button type="button">hire me <FaArrowRight/></button>
           </a>
         </div>
       </div>

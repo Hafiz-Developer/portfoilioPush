@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../img/Logo.png";
+import { FaRegMoon, FaRegSun } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -12,20 +12,20 @@ const Navbar: React.FC = () => {
     } else {
       const element = document.getElementById(link);
       if (element) {
-        const navbarHeight = document.querySelector(".header")?.clientHeight || 0;
-        const offset = element.offsetTop - navbarHeight - 0; // Adjust as needed
+        const navbarHeight =
+          document.querySelector(".header")?.clientHeight || 0;
+        const offset = element.offsetTop - navbarHeight - 10; // Adjust as needed
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
     }
   };
-  
+
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
-    if(!isNavOpen){
-      document.body.style.overflow = 'hidden';
-    }
-    else{
-      document.body.style.overflow = 'auto';
+    if (!isNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
   };
   const [stickyClass, setStickyClass] = useState("");
@@ -41,12 +41,27 @@ const Navbar: React.FC = () => {
       windowHeight > 0 ? setStickyClass("sticky-nav") : setStickyClass("");
     }
   };
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    return storedTheme ? storedTheme === "dark" : prefersDarkMode;
+  });
+  useEffect(() => {
+    document.body.className = isDarkMode ? "dark-theme" : "light-theme";
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
     <>
       <header className={`header ${stickyClass}`}>
         <div className="logo">
-          <img src={logo} alt="" />
+          <img src="/headerLogo.png" alt="" />
         </div>
         <nav>
           <ul className={`${isNavOpen ? "nav-open" : ""}`}>
@@ -67,6 +82,9 @@ const Navbar: React.FC = () => {
           </ul>
           <div className={`triangle triangle-${activeLink}`}></div>
         </nav>
+        <div className="dark-mode" onClick={toggleDarkMode}>
+          {isDarkMode ? <FaRegSun /> : <FaRegMoon />}
+        </div>
         <label className="burger" htmlFor="burger">
           <input type="checkbox" id="burger" onClick={toggleNav} />
           <span></span>

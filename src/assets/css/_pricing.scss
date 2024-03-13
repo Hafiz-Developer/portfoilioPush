@@ -7,13 +7,13 @@
   .mainPricingText {
     line-height: 4rem;
     p {
-      color: $pink-color;
+      color: var(--pink-color);
       font-size: 1.2rem;
       letter-spacing: 0.2rem;
       text-transform: uppercase;
     }
     h1 {
-      color: $text-color-big;
+      color: var(--text-color-big);
       font-size: 6rem;
       letter-spacing: 0.3rem;
       font-weight: $fnt-weight--500;
@@ -27,18 +27,18 @@
     border-radius: 1rem;
     padding-bottom: 2rem;
     .mainPricingButton {
-      background-color: #202327;
+      background-color: var(--info-img-bg);
       display: flex;
       position: relative;
-      box-shadow: -0px -0px 0px 0px #24272b, 5px  5px 6px 0px #1d1f23;
+      box-shadow: -0px -0px 0px 0px var(  --pricing-shaodow), 5px  5px 6px 0px var(--pricing-shaodow2);
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
       align-items: center;
       .standardButton {
         position: relative;
         h6 {
-          background-color: $pricing-bg-re;
-          color: $text-color-white;
+          background-color: var(--pricing-bg-re);
+          color: var(--text-color-white);
           position: absolute;
           top: -4rem;
           left: 4rem;
@@ -48,7 +48,7 @@
           border-radius: 5rem;
           padding: 0.5rem 1.5rem;
           width: 10rem;
-          color: $text-color-white;
+          color: var(--text-color-white);
         }
         span {
           $border: 0.8rem solid transparent;
@@ -61,11 +61,11 @@
           transition: 300ms;
           border-left: $border;
           border-right: $border;
-          border-top: 1.2rem solid $pricing-bg-re;
+          border-top: 1.2rem solid var(--pricing-bg-re);
         }
       }
       button {
-        color: $text-color-white;
+        color: var(--text-color-white);
         background: transparent;
         padding: 2rem 2rem;
         border: none;
@@ -76,7 +76,7 @@
         cursor: pointer;
       }
       .ahmad {
-        color: $pink-color;
+        color: var(--pink-color);
       }
     }
     .titlePrice {
@@ -86,7 +86,7 @@
       padding-inline: 2rem;
       margin-top: 5rem;
       h2 {
-        color: $text-color-medium;
+        color: var(--text-color-medium);
         font-size: 2.5rem;
         text-transform: capitalize;
       }
@@ -104,7 +104,7 @@
     }
     h3 {
       padding-inline: 2rem;
-      color: $text-color-big;
+      color: var(--text-color-big);
       margin-top: 3rem;
       text-transform: capitalize;
       line-height: 2rem;
@@ -118,7 +118,7 @@
       justify-content: space-between;
       line-height: 3.7rem;
       p {
-        color: $text-color-small;
+        color: var(--text-color-small);
         opacity: 0.8;
         display: flex;
         align-items: center;
@@ -164,7 +164,7 @@
         font-weight: 700;
         letter-spacing: 0.1rem;
         text-transform: capitalize;
-        color: $text-color-medium;
+        color: var(--text-color-medium);
       }
     }
   }
@@ -215,7 +215,6 @@
       left: 0%;
       top: 1rem;
       height: 100%;
-      box-shadow: -5px -7px 13px 0px #24272b, 11px 11px 15px 0px #1d1f23;
       .mainPricingButton {
         button {
           padding: 1.5rem 2rem;
@@ -226,7 +225,7 @@
         padding-inline: 1rem;
         margin-top: 3rem;
         h2 {
-          color: #c4cfde;
+          color: var(--text-color-big);
           font-size: 2.1rem;
           font-weight: 400;
         }

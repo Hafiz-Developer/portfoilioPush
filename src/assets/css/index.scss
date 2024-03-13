@@ -1,21 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "variables";
-
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
-a{
+a {
   text-decoration: none;
 }
 html {
   font-size: 62.5%;
 }
+
+$fnt-weight-900: 900;
+$fnt-weight--500: 900;
+$fnt-weight--lighter: lighter;
+$text-capt: capitalize;
+$cursor: pointer;
+
+.dark-theme {
+  --bg-clr: #212428;
+  --clr-fnt-white: #a4aab4;
+  --clr-info-h2: #00fff0;
+  --clr_hr: #27debf;
+  --pink-color: #ff014d;
+  --pink-color-light: #ff014d83;
+  --red: red;
+  --text-color-medium: #c1ccdc;
+  --text-color-small: #a8b1be;
+  --clr-navbar-triangle: #ffffff;
+  --text-color-white: #ffffff;
+  --text-color-big: #c4cfde;
+  --pricing-bg-re: #555a61;
+  --button-bg: #22262a;
+  --info-img-bg: #202327;
+  --box-shadow: #363b41e3;
+  --box-shadow2: #1f2125;
+  --box-shadow3: #22262a;
+  --pricing-shaodow: #24272b;
+  --pricing-shaodow2: #1d1f23;
+  --icon-bg: #24272b;
+  --icon-bg2: rgba(0, 0, 0, 0.121);
+  --bg-contact-small: #1e1e1e;
+  --bg-contact-input: #191b1e;
+  --bg-cv: #2b2f34;
+}
+
+.light-theme {
+  --bg-contact-small: #191b1ee9;
+  --bg-cv: rgba(99, 99, 99, 0.2);
+  --bg-contact-input: #191b1ee6;
+  --icon-bg: white;
+  --icon-bg2: white;
+  --bg-clr: #ffffff;
+  --clr-fnt-white: #212428;
+  --clr-info-h2: #007f75;
+  --clr_hr: #009c92;
+  --pink-color: #cdb99c;
+  --pink-color-light: #ff006383;
+  --red: red;
+  --text-color-medium: #525c68;
+  --text-color-small: #7e8a97;
+  --clr-navbar-triangle: #000000;
+  --text-color-white: #000000;
+  --text-color-big: #4a5561;
+  --pricing-bg-re: #e1e5ea;
+  --button-bg: rgba(243, 245, 247, 0.71);
+  --info-img-bg: #f0f2f5;
+  --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --box-shadow2: #f0f2f5;
+  --box-shadow3: #f0f2f5;
+  --pricing-shaodow: #f0f2f5;
+  --pricing-shaodow2: #f0f2f5;
+}
+.dark-theme,
+.light-theme {
+  transition: 10ms;
+}
+
 body {
-  background-color: $bg-clr;
+  background-color: var(--bg-clr);
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -39,46 +104,74 @@ body {
 .ahmad,
 .titlePrice button,
 .addReivew button,
-.project-text a ,
+.project-text a,
 .order button,
 .allskills button,
-.iconCv ,
+.iconCv,
 .find,
 .findContact .icons,
-.arrow-up
-{
+.arrow-up {
   font-weight: 600 !important;
   text-transform: $text-capt;
   cursor: $cursor;
-  background: $button-bg;
-  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383), -2px -0px 10px 0px $box-shadow;
-  color: $pink-color;
+  background: var(--button-bg);
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383),
+    -2px -0px 10px 0px var(--box-shadow);
+  color: var(--pink-color);
 }
 
-    .client-seocnd {
-    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
-box-shadow: -5px -7px 13px 0px #24272b, 11px 11px 15px 0px #1d1f23;
-
+.client-seocnd {
+  background: linear-gradient(
+    to right bottom,
+    var(--box-shadow2),
+    var(--box-shadow3)
+  );
+  box-shadow: -5px -7px 13px 0px var(--pricing-shaodow),
+    11px 11px 15px 0px var(--pricing-shaodow2);
 }
-.services_box ,   .pricingCard  ,  .client-id , .contact-id   {
-    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
-    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383), -2px -0px 10px 0px $box-shadow;
-
+.services_box,
+.pricingCard,
+.client-id,
+.contact-id {
+  background: linear-gradient(
+    to right bottom,
+    var(--box-shadow2),
+    var(--box-shadow3)
+  );
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383),
+    -2px -0px 10px 0px var(--box-shadow);
 }
-.mainInfo   .img{
-    background-color: $info-img-bg;
-  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.383), -2px -0px 10px 0px $box-shadow;
+.mainInfo .img {
+  background-color: var(--info-img-bg);
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.383),
+    -2px -0px 10px 0px var(--box-shadow);
 }
-  .education-skills{
-    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
-    box-shadow: -0px -0px 8px 0px $box-shadow, 0px 0px  8px 0px $box-shadow;
-  }
-  .container ,  .about-cv  ,  .workExperience  , .References {
-    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
-    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383), -2px -0px 7px 0px $box-shadow;
+.education-skills {
+  background: linear-gradient(
+    to right bottom,
+    var(--box-shadow2),
+    var(--box-shadow3)
+  );
+  box-shadow: -0px -0px 8px 0px var(--box-shadow),
+    0px 0px 8px 0px var(--box-shadow);
+}
+.container,
+.about-cv,
+.workExperience,
+.References {
+  background: linear-gradient(
+    to right bottom,
+    var(--box-shadow2),
+    var(--box-shadow3)
+  );
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383),
+    -2px -0px 7px 0px var(--box-shadow);
 }
 .firstHead {
-    background: linear-gradient(to right bottom, $box-shadow2, $box-shadow3);
-  box-shadow: 4px 4px 15px 0px #2b2f34;
-
+  background: linear-gradient(
+    to right bottom,
+    var(--box-shadow2),
+    var(--box-shadow3)
+  );
+  box-shadow: 4px 4px 15px 0px var(--bg-cv);
 }

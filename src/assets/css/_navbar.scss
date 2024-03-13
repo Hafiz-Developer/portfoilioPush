@@ -1,14 +1,21 @@
 .sticky-nav {
-  position: fixed;
-  top: 0;
+  position: sticky;
+  inset: 0;
   transition: 200ms linear;
-  left: 0;
-  right: 0;
-  background-color: $info-img-bg;
+  background-color: var(--info-img-bg);
+}
+.dark-mode{
+  position: absolute;
+  right: 3rem;
+  top: 2.8rem;
+  cursor: pointer;
+  font-size: 2.7rem;
+  color: var(--clr-fnt-white);
 }
 .header {
   justify-content: space-between;
   padding: 0rem 3rem;
+  padding-bottom: 1.1rem;
   display: flex;
   z-index: 1;
   align-items: center;
@@ -19,6 +26,7 @@
   }
   nav {
     position: relative;
+    right: 4%;
     top: 1.5rem;
     .triangle {
       $border: 0.9rem solid transparent;
@@ -31,7 +39,7 @@
       top: 0.7rem;
       border-left: $border;
       border-right: $border;
-      border-bottom: 1.5rem solid $clr-navbar-triangle;
+      border-bottom: 1.5rem solid var(--clr-navbar-triangle);
     }
     ul {
       display: flex;
@@ -39,14 +47,14 @@
       li {
         list-style: none;
         .nav-link.active {
-          color: $clr-navbar-triangle;
+          color: var(--clr-navbar-triangle);
           transition: 300ms;
         }
         a {
           text-decoration: none;
           cursor: pointer;
           font-size: 2rem;
-          color: $clr-fnt-white;
+          color: var(--clr-fnt-white);
           text-transform: $text-capt;
           font-weight: $fnt-weight--lighter;
           letter-spacing: 0rem;
@@ -78,6 +86,12 @@
   left: calc(2rem + 58rem);
 }
 @media (width < 992px) {
+  .dark-mode{
+    position: absolute;
+    font-size: 2.5rem;
+    right: 3%;
+    top: 6rem;
+  }
   .header {
     flex-direction: column;
     justify-content: center;
@@ -90,6 +104,7 @@
     }
     nav {
       margin-top: -1rem;
+      right: 0;
       ul {
         gap: min(5vw, 5rem);
         li {
@@ -105,7 +120,7 @@
     top: 0.5rem;
     border-left: $border;
     border-right: $border;
-    border-bottom: min(2vw, 1.4rem) solid $clr-navbar-triangle;
+    border-bottom: min(2vw, 1.4rem) solid var(--clr-navbar-triangle);
   }
   .triangle-home {
     left: 1.5rem;
@@ -127,7 +142,11 @@
   }
 }
 @media (width < 600px) {
-
+  .dark-mode{
+    position: absolute;
+    right: 6rem;
+    top: 2.5rem;
+  }
   .header {
     flex-direction: row;
     justify-content: start;
@@ -166,7 +185,7 @@
           a {
             font-size: clamp(1.7rem, 3vw, 2rem);
             position: relative;
-            color: $text-color-white;
+            color: var(--text-color-white);
             &::after {
               content: "";
               position: absolute;
@@ -176,7 +195,7 @@
               top: 2.5rem;
               left: 0rem;
               opacity: 0.8;
-              background-color: $pink-color;
+              background-color: var(--pink-color);
               transform-origin: bottom left;
               transition: transform 0.25s ease-out;
             }
@@ -223,7 +242,7 @@
         position: absolute;
         height: 3px;
         width: 100%;
-        background: white;
+        background: var(--text-color-white);
         border-radius: 9px;
         opacity: 1;
         left: 0;

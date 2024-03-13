@@ -4,7 +4,6 @@ import { TbBrandFiverr } from "react-icons/tb";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
-import img from "../img/mainImage.png";
 
 const Info: React.FC = () => {
   return (
@@ -59,7 +58,7 @@ const Info: React.FC = () => {
       </div>
       <div className="box">
         <div className="img">
-          <img src={img} alt="" />
+          <img src="/my.png" alt="" />
         </div>
       </div>
     </div>

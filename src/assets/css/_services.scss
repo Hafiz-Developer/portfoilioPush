@@ -3,13 +3,13 @@
   padding-inline: clamp(1rem, 3vw, 4rem);
   .services_text {
     p{
-      color: $pink-color;
+      color: var(--pink-color);
       font-size: 1.2rem;
       letter-spacing: 0.2rem;
       text-transform: uppercase;
     }
     h2 {
-      color:$text-color-big ;
+      color:var(--text-color-big) ;
       font-size: 7rem;
       letter-spacing: 0.3rem;
       font-weight: $fnt-weight--500;
@@ -24,13 +24,12 @@
     .services_box {
       padding: 5rem 2rem;
       margin-top: 5rem;
-      // width: clamp(20rem, 100%, 31rem);
       width: 100%;
       border-radius: 1rem;
         .services_tex{
         flex-direction: column;
         .servicesIcon{
-          color: $pink-color;
+          color: var(--pink-color);
           font-size: 5rem;
         }
         p,
@@ -40,12 +39,12 @@
         }
         h2 {
           font-size: 2.3rem;
-          color: $text-color-medium;
+          color: var(--text-color-medium);
         }
         p {
           font-size: 1.3rem;
           line-height: 2.2rem;
-          color: $text-color-small;
+          color: var(--text-color-small);
           opacity: 0.8;
           letter-spacing: 0.1rem;
           margin-bottom: 2.5rem;

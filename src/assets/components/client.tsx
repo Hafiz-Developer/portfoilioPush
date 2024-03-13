@@ -3,23 +3,37 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { LiaQuoteRightSolid } from "react-icons/lia";
-import Review from './addReview'
+import { FaRegStar } from "react-icons/fa";
 const Client: React.FC = () => {
   const [currentUserIndex, setCurrentUserIndex] = useState(0);
+
   const openPopup = () => {
     const overlay: HTMLElement | null = document.getElementById("popup1");
     if (overlay) {
       overlay.style.visibility = "visible";
       overlay.style.opacity = "1";
+      disableScroll();
+      removeHashFromURL();
     }
   };
   const closePopup = () => {
-    // Your closePopup2 function implementation here
     const overlay = document.getElementById("popup1");
     if (overlay) {
       overlay.style.visibility = "hidden";
       overlay.style.opacity = "0";
+      enableScroll();
+      removeHashFromURL();
     }
+  };
+  const removeHashFromURL = () => {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  };
+  const disableScroll = () => {
+    document.body.classList.add('no-scroll');
+  };
+
+  const enableScroll = () => {
+    document.body.classList.remove('no-scroll');
   };
 const client = [
     {
@@ -31,7 +45,6 @@ const client = [
         clientPlatform:'via up work - mar 4 ,2015 - aug 30 , 2021',
         clientWebsiteLink:'http://localhost:5173/',
         clientRating: 5,
-
         clientF:"  LoremlaksclANVWE  ipsum dolor sit amet consectetur adipisicing elit Cum  exercitationem blanditiis  Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Cum Exercitationem Blanditiis Quo Soluta Commodi Sed Suscipitquo soluta commodi sed suscipit", 
     },
     {
@@ -63,13 +76,19 @@ useEffect(() => {
     setCurrentUserIndex((prevIndex) => (prevIndex - 1 + client.length) % client.length);
   };
     
+   
       const renderStars = (rating: number) => {
         const stars = [];
-        for (let i = 0; i < rating; i++) {
-          stars.push(<FaStar key={i} className="startIcon" />);
+        for (let i = 0; i < 5; i++) {
+          if (i < rating) {
+            stars.push(<FaStar key={i} className="starIcon" />);
+          } else {
+            stars.push(<FaRegStar key={i} className="starIcon" />);
+          }
         }
         return stars;
       };
+      
     
   return (
     <div className="client" id="reviews">
@@ -100,7 +119,6 @@ useEffect(() => {
         <div className="client-web-info">
           <div className="client-first">
           <LiaQuoteRightSolid className="hanogutsIcons" />
-         <Review/>
             <div className="button-right-left">
               <button type="button" onClick={handlePrevClick}>
                 <FaArrowLeft className="arrow" />

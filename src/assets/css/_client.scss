@@ -9,6 +9,10 @@
     visibility: hidden;
     opacity: 0;
     z-index: 1;
+    
+  }
+  .no-scroll {
+    overflow: hidden !important;
   }
   .overlay:target {
     visibility: visible;
@@ -26,11 +30,11 @@
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: var(--text-color-white);
     
   }
   .popup .close:hover {
-    color: $pink-color;
+    color: var(--pink-color);
   }
   .popup {
     position: relative;
@@ -74,13 +78,13 @@
     line-height: 4rem;
     text-align: center;
     p {
-      color: $pink-color;
+      color: var(--pink-color);
       font-size: 1.2rem;
       letter-spacing: 0.2rem;
       text-transform: uppercase;
     }
     h1 {
-      color: $text-color-big;
+      color: var(--text-color-big);
       font-size: 6rem;
       letter-spacing: 0.3rem;
       font-weight: $fnt-weight--500;
@@ -115,11 +119,11 @@
         h2 {
           span {
             text-transform: capitalize;
-            color: $pink-color;
+            color: var(--pink-color);
             font-size: 1.5rem;
           }
           h3 {
-            color: $text-color-white;
+            color: var(--text-color-white);
             font-size: 3.5rem;
             @media (width < 500px) {
             font-size: 3rem !important;
@@ -129,7 +133,7 @@
             letter-spacing: 0.1rem;
           }
           a {
-            color: $text-color-big;
+            color: var(--text-color-big);
             text-decoration: none;
             left: 0.1rem;
             font-size: 1.5rem;
@@ -153,7 +157,7 @@
                 display: flex;
                 align-items:  center;
                 gap: 0.6rem;
-                color: $text-color-white;
+                color: var(--text-color-white);
                 text-transform: capitalize;
                 font-size: 1.3rem;
                 font-weight: 600;
@@ -168,17 +172,16 @@
                 justify-content: center;
                 align-items: center;
                 gap: 1.6rem;
-           
                 button{
                     cursor: $cursor;
                     border: none;
                     outline: none;
-                    background: $button-bg;
-                    box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.383),-1px -1px 6px 0px #363b41e3;
+                    background: var(--button-bg);
+                    box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.383),-1px -1px 6px 0px var(--box-shadow);
                     padding: 1rem 1rem 0.8rem 1rem;
                     border-radius: 0.2rem;
                     .arrow{
-                        color: $text-color-white;
+                        color: var(--text-color-white);
                         font-size: 1.5rem;
                         font-weight: lighter;
                     }
@@ -206,7 +209,7 @@
                 }
                 .title-work{
                     h1{
-                        color: $text-color-white;
+                        color: var(--text-color-white);
                         text-transform: capitalize;
                         font-size: clamp(2rem , 6vw ,3rem);
                         font-weight: 200;
@@ -216,14 +219,14 @@
                     p{
                         text-transform: capitalize;
                         margin-top: 1rem;
-                        color: $text-color-medium;
+                        color: var(--text-color-medium);
                     }
                     a{
                       text-transform: capitalize;
                   
                       position: relative;
                       top: 1rem;
-                      color: $pink-color;
+                      color: var(--pink-color);
                       font-size: 1.3rem;
                       text-decoration: none;
                     }
@@ -231,8 +234,8 @@
                 .rating{
                     padding: 0.7rem 1.3rem;
                      color: #FAAA1F;
-                    background: $button-bg;
-                    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383),-2px -0px 10px 0px #363b41e3;
+                    background: var(--button-bg);
+                    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.383),-2px -0px 10px 0px var(--box-shadow);
                     display: flex;
                     gap: 0.2rem;
                     font-size: 1.2rem;
@@ -262,13 +265,13 @@
                 span{
                     text-transform: capitalize;
                     font-size: 1.7rem;
-                    color: $pink-color;
+                    color: var(--pink-color);
                     font-weight: 600;
                 }
                 a{
-                    color: rgb(255, 0, 0);
+                    color: var(--red);
                     font-size: 1.4rem;
-                    transition: 100ms;
+                    transition: 300ms;
                     &:hover{
                         color: blue;
                     }
@@ -277,7 +280,7 @@
                     }
                 }
                 p{
-                    color: $text-color-small;
+                    color: var(--text-color-small);
           opacity: 0.8;
                     font-size: 1.3rem;
                     text-transform: capitalize;

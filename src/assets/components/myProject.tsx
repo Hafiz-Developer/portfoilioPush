@@ -12,31 +12,34 @@ const Project: React.FC = () => {
   const projectData = [
     {
       projectId: 1,
-      projectName: "Project 1",
-      projectDescription: "Description for Project 1",
+
+      projectName: "seotoolers",
+      projectDescription:
+        "seotoolers.com is a dynamic website with front-end development in HTML, CSS, JavaScript, and Next.js, backed by Node.js, Express.js, and MongoDB. Users can buy, sell, and access services, with additional offerings for diverse needs.",
       imageUrl1: "seo.png",
-      imageUrl2: "Seo4.png",
-      url: "http://example.com/project1",
+      imageUrl2: "seoMobile.png",
+      url: "https://www.seotoolers.com/",
     },
     {
       projectId: 2,
-      projectName: "Project 2",
-      projectDescription: "Description for Project 2",
-      imageUrl1: "seo.png",
-      imageUrl2: "Seo4.png",
-      url: "http://example.com/project2",
+      projectName: "hcars",
+      projectDescription:
+        "The website hcars.netlify.app is a static site designed for car enthusiasts. Developed using HTML, CSS, JavaScript, and React.js, it offers a user-friendly interface for browsing and exploring cars.",
+      imageUrl1: "car.png",
+      imageUrl2: "carMobile.png",
+      url: "https://hcars.netlify.app/",
     },
     {
       projectId: 3,
-      projectName: "Project 3",
-      projectDescription: "Description for Project 3",
-      imageUrl1: "seo.png",
-      imageUrl2: "Seo4.png",
-      url: "http://example.com/project3",
+      projectName: "restaurantw",
+      projectDescription:
+        "The website restaurantw.netlify.app is designed specifically for restaurant reservations, focusing on evening dining experiences. It is a static website, crafted with HTML, CSS,  JavaScript and  React js , ensuring simplicity and efficiency in its functionality.",
+      imageUrl1: "res.png",
+      imageUrl2: "resMobile.png",
+      url: "https://restaurantw.netlify.app/",
     },
   ];
 
-  
   useEffect(() => {
     setShuffledProjectData(shuffleArray(projectData));
   }, []);
@@ -135,7 +138,14 @@ const Project: React.FC = () => {
   };
 
   const ProjectItem: React.FC<{ project: any }> = ({ project }) => {
-    const { projectId, projectName, projectDescription, imageUrl1, imageUrl2, url } = project;
+    const {
+      projectId,
+      projectName,
+      projectDescription,
+      imageUrl1,
+      imageUrl2,
+      url,
+    } = project;
     const { like, likeCount, handleLikeClick, handleUnlikeClick } =
       useProjectLike(projectId);
 
@@ -168,18 +178,17 @@ const Project: React.FC = () => {
   return (
     <>
       <div className="mainProject" id="project">
-      <div className="client-project">
-        <p>My Client Project</p>
-        <h1>Projects</h1>
-      </div>
+        <div className="client-project">
+          <p>My Client Project</p>
+          <h1>Projects</h1>
+        </div>
         {/* Project data */}
         {shuffledProjectData.map((project) => (
           <ProjectItem key={project.projectId} project={project} />
         ))}
         <div className="see">
           <Link to="/allProjects">
-            See <span> more projects</span>{" "}
-            <MdDoubleArrow className="seIcon" />
+            See <span> more projects</span> <MdDoubleArrow className="seIcon" />
           </Link>
         </div>
       </div>
