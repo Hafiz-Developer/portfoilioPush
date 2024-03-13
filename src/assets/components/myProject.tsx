@@ -24,7 +24,7 @@ const Project: React.FC = () => {
       projectId: 2,
       projectName: "hcars",
       projectDescription:
-        "The website hcars.netlify.app is a static site designed for car enthusiasts. Developed using HTML, CSS, JavaScript, and React.js, it offers a user-friendly interface for browsing and exploring cars. Whether you're looking to buy, sell, or simply admire cars, this platform provides a seamless experience. With its sleek design and intuitive navigation, hcars.netlify.app caters to all automotive enthusiasts' needs.",
+        "The website hcars.netlify.app is a static site designed for car enthusiasts. Developed using HTML, CSS, JavaScript, and React.js, it offers a user-friendly interface for browsing and exploring cars.",
       imageUrl1: "car.png",
       imageUrl2: "carMobile.png",
       url: "https://hcars.netlify.app/",

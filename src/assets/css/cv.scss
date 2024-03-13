@@ -15,7 +15,7 @@
         border-radius: 10rem;
         &::before {
           content: "";
-          border: 15px solid #ff014d;
+          border: 15px solid var(--pink-color);
           border-radius: 50%;
           height: 150px;
           width: 150px;
@@ -75,13 +75,13 @@
         }
       }
       h2 {
-        color: $text-color-white;
+        color: var(--text-color-white);
         font-size: clamp(2.7rem, 8vw, 4rem);
         margin-top: 3rem;
         text-transform: uppercase;
       }
       p {
-        color: $text-color-medium;
+        color: var(--text-color-medium);
         opacity: 0.8;
         font-size: clamp(1rem, 2vw, 1.4rem);
         margin-top: 0.5rem;
@@ -93,18 +93,19 @@
         gap: 1.5rem;
         cursor: pointer;
         button {
-          background-color: $pink-color;
+          background-color: var(--pink-color);
           cursor: pointer;
           padding: 1rem 3rem;
           font-size: 1.4rem;
-          color: $text-color-white;
+          color: var(--text-color-white);
           text-transform: capitalize;
           border: none;
           outline: none;
           border-radius: 0.2rem;
+          font-weight: 700;
           a{
             text-decoration: none;
-          color: $text-color-white;
+          color: var(--text-color-white);
           }
         }
       }
@@ -121,11 +122,11 @@
           z-index: 1;
           padding: 1rem 2rem;
           .icons {
-            color: $text-color-white;
+            color: var(--text-color-white);
             font-size: 1.5rem;
-            background: $button-bg;
-            box-shadow: 7px 6px 11px -3px rgba(0, 0, 0, 0.121),
-              -8px -6px 13px 0px #24272b;
+            background: var(--button-bg);
+            box-shadow: 7px 6px 11px -3px var(  --icon-bg2),
+              -8px -6px 13px 0px var(  --pricing-shaodow);
             rotate: 90deg;
             height: 4rem;
             width: 4rem;
@@ -144,7 +145,7 @@
     height: 100%;
     h1 {
       font-size: clamp(3rem, 10vw, 4rem);
-      color: $text-color-big;
+      color: var(--text-color-big);
       font-weight: 700;
     }
     .topMarigin {
@@ -154,7 +155,7 @@
         padding-left: 3rem;
         padding-top: 3rem;
         position: relative;
-        border-left: 1.6px solid $pink-color;
+        border-left: 1.6px solid var(--pink-color);
         position: relative;
         left: 3rem;
         margin-top: 2rem;
@@ -162,13 +163,13 @@
           content: "";
           display: inline-block;
           position: absolute;
-          background-color: $text-color-white;
+          background-color: var(--text-color-white);
           border-radius: 100%;
           width: 20px;
           height: 20px;
           top: 0px;
           left: -16px;
-          border: 5px solid $pink-color;
+          border: 5px solid var(--pink-color);
           z-index: 2;
         }
         .projects{
@@ -182,12 +183,12 @@
             margin-inline: auto;
             span{
               font-size: 2rem;
-              color: $text-color-white;
+              color: var(--text-color-white);
               text-transform: capitalize;
             }
             a{
               font-weight: 900;
-              color: $pink-color;
+              color: var(--pink-color);
                 opacity: 0.8;
                 font-size: 1.4rem;
                 letter-spacing: 0.1rem;
@@ -199,20 +200,20 @@
             }
         }
         h2 {
-          color: $text-color-medium;
+          color: var(--text-color-medium);
           font-size: clamp(1.5rem, 3.5vw, 3rem);
           font-weight: 600;
           span{
-            color: $pink-color;
+            color: var(--pink-color);
           }
         }
         h4 {
           margin-top: 1rem;
           font-size: 1.3rem;
-          color: $text-color-medium;
+          color: var(--text-color-medium);
         }
         p {
-          color: $text-color-small;
+          color: var(--text-color-small);
           opacity: 0.8;
           text-align: justify;
           font-size: clamp(1rem, 4vw, 1.7rem);
@@ -225,6 +226,7 @@
     }
   }
   .References {
+    display: none !important;
     margin-top: 7rem;
     margin-inline: auto;
     padding: 2rem;
@@ -232,7 +234,7 @@
     h1 {
       font-size: 4rem;
       font-weight: 700;
-      color: $text-color-big;
+      color: var(--text-color-big);
     }
     .flex-r {
       display: flex;
@@ -246,13 +248,13 @@
           gap: 1rem;
           line-height: 2rem;
           h3 {
-            color: $text-color-big;
+            color: var(--text-color-big);
             font-size: 1.6rem;
             font-weight: bold;
           }
           p {
             font-size: 1.3rem;
-            color: $text-color-small;
+            color: var(--text-color-small);
             opacity: 1;
           }
           .img {
@@ -264,7 +266,7 @@
             transition: all 0.3s ease-out;
             &::before {
               content: "";
-              border: 5px solid #ff014d;
+              border: 5px solid var(--pink-color);
               border-radius: 50%;
               height: 6rem;
               width: 6rem;
@@ -324,7 +326,7 @@
           margin-top: 2rem;
           line-height: 2.5rem;
           text-align: justify;
-          color: $text-color-small;
+          color: var(--text-color-small);
           opacity: 0.5;
           width: calc(100% - 0rem);
         }
@@ -344,20 +346,20 @@
       h1 {
         font-size: 4rem;
         font-weight: 700;
-        color: $text-color-big;
+        color: var(--text-color-big);
         text-transform: capitalize;
       }
       h2 {
         font-size: 1.5rem;
         margin-top: 2rem;
-        color: $text-color-small;
+        color: var(--text-color-small);
         opacity: 0.8;
         line-height: 2.3rem;
         font-weight: 400;
         text-align: justify;
         a {
           font-size: 1.5rem;
-          color: $pink-color;
+          color: var(--pink-color);
           font-weight: 600;
           opacity: 1;
           text-decoration: none;
@@ -369,7 +371,7 @@
       width: 60%;
       h1 {
         font-size: clamp(2rem, 10vw, 4rem);
-        color: $text-color-big;
+        color: var(--text-color-big);
         font-weight: 700;
       }
       .flex-info {
@@ -385,13 +387,13 @@
             text-transform: capitalize;
             font-size: 1.6rem;
             font-weight: 600;
-            color: $pink-color;
+            color: var(--pink-color);
             opacity: 0.8;
           }
         }
         .right {
           p {
-            color: $text-color-small;
+            color: var(--text-color-small);
             font-size: 1.5rem;
             @media (width < 385px) {
               font-size: 1.1rem;
@@ -409,7 +411,7 @@
     h2{
         font-size: 4rem;
         font-weight: 700;
-        color: $text-color-big;
+        color: var(--text-color-big);
         text-transform: capitalize;
     }
     .education{
@@ -419,7 +421,7 @@
         align-items: center;
         flex-wrap: wrap;
         h1{
-            color: $text-color-big;
+            color: var(--text-color-big);
             font-size: 1.5rem;
             text-transform: capitalize;
             font-weight: 600;
@@ -429,13 +431,13 @@
             font-size: 1.5rem;
             margin-top: 1rem;
             text-transform: capitalize;
-            color: $text-color-small;
+            color: var(--text-color-small);
             opacity: 0.8;
         }
         strong{
             margin-top: 1rem;
             opacity: 0.8;
-            color: $pink-color;
+            color: var(--pink-color);
             font-size: 1.5rem;
             display: flex;
             gap: 0.5rem;
@@ -582,14 +584,10 @@
             width: 21.5rem;
             rotate: 0deg;
             padding: 1rem;
-            background: #22262a;
             box-shadow: none;
             .icons {
-              color: $text-color-white;
+              color: var(--text-color-white);
               font-size: 1.5rem;
-              background: #22262a;
-              box-shadow: 7px 6px 11px -3px rgba(0, 0, 0, 0.121),
-                -8px -6px 13px 0px #24272b;
               rotate: 0deg;
             }
           }

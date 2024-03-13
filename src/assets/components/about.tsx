@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 const About: React.FC = () => {
   return (
     <>
@@ -19,7 +20,7 @@ const About: React.FC = () => {
             who understands the intricacies of the MERN stack.
           </p>
           <a href="https://www.linkedin.com/in/hafiz-ahmad-523a54296/">
-          <button type="button">hire me</button>
+          <button type="button">hire me <FaArrowRight/></button>
           </a>
         </div>
       </div>

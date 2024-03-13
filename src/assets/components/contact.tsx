@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
               <span>
                 <h2>Address :</h2>
                 <a
-                  target="_blank"
+                  
                   href="https://www.google.com/maps/place/Shad+Bagh,+Lahore,+Punjab/@31.6003399,74.3410379,15z/data=!3m1!4b1!4m6!3m5!1s0x39191b0b83c7ea7d:0x51cf9a6d6eb7bbf0!8m2!3d31.6000644!4d74.3396851!16zL20vMDlxMWpz?entry=ttu"
                 >
                   92, City Lahore, Shahdara Bagh , P.k
@@ -41,23 +41,23 @@ const Contact: React.FC = () => {
                 <div className="contactIcons">
                   <a
                     href="https://wa.me/+923193223060?text=Hello! We can help you with building your website ?"
-                    target="_blank"
+                    
                     rel="noopener noreferrer"
                   >
                     <FaWhatsapp className="icons" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/hafiz-ahmad-523a54296/"
-                    target="_blank"
+                    
                     rel="noopener noreferrer"
                   >
                     <FaLinkedinIn className="icons" />
                   </a>
-                  <a href="" target="_blank" rel="noopener noreferrer">
+                  <a href=""  rel="noopener noreferrer">
                     <TbBrandFiverr className="icons" />
                     <a
                       href="https://mailto:ahmaddeveloper122@gmail.com"
-                      target="_blank"
+                      
                       rel="noopener noreferrer"
                     >
                       <MdOutlineMarkEmailRead className="icons" />
@@ -67,9 +67,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* <div className="contact_info_card"> */}
           <Card />
-          {/* </div> */}
         </div>
       </div>
     </>

@@ -38,7 +38,7 @@ const Card: React.FC = () => {
       !formData.projectDesc ||
       !formData.googleMeet
     ) {
-      // Display an error toast message if any field is empty
+      // Display an error toast message if any field is emptyz
       toast.error("Please fill all the input fields.", {
         position: "top-center",
         autoClose: 1900,
